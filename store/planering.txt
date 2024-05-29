@@ -1,0 +1,49 @@
+Planering av Webbplatsens Utformning
+Hemsida
+
+Syfte: bakgrund bild med namn på resturant och ge en översikt av tjänsterna.
+Innehåll:
+bakgrund bild och namn på restunrant på bilden
+Navigationslänkar till meny, bokning och kontakt.
+två knappar på header bild som scrolla ner till menu och bokning Formulär
+
+Meny
+
+Syfte: Visa veckomemenuyn för besökare.
+Innehåll:
+Lista över pizza, pasta och förrätter.
+tre länkar som ta kunder till den valda menu till exampel pasta så det kommer att scrolla ner till pasta menu och så vidare
+Pris och beskrivning för varje rätt.
+
+
+Boka Bord.
+
+Syfte: Låta besökare boka bord online.
+Innehåll:
+Formulär för bokning med namn, telefonnummer, e-post, datum, tid och antal personer, takc away val och meddelande.
+
+
+Kontakt
+
+Syfte: Ge besökare möjlighet att kontakta restaurangen.
+Innehåll:
+Kontaktinformation
+resturant konto på olika sociala medier plattform
+** Kontaktformulär (om jag hinner på att fylla dem krav lista)
+** recensioner (när jag slutar dem alla grund kraven)
+
+Admin Login
+
+Syfte: Låta administratörer logga in för att hantera webbplatsens innehåll.
+Innehåll:
+Formulär för användarnamn och lösenord
+
+
+Admin Dashboard
+
+Syfte: Ge administratörer en översikt och möjlighet att hantera menyer och bokningar.
+Innehåll:
+Lista över nuvarande menyer
+Formulär för att lägga till ny meny, radera eller uppdatera benefitliga manu
+möjliget att registera en ny admin med möjlihet att vsa dem i lista
+Lista över bokningar, admin kan uppdatera eller radera bokningar.

@@ -117,3 +117,14 @@
     color: white;
     transition: background 0.3s ease-in-out;
 }
+
+
+form.form-container.customer_feedBack {
+    max-width: 500px;
+    margin-top: 2em;
+}
+
+form#feedBack_form {
+   
+    box-shadow: 12px -8px 13px 3px #0009;
+}

@@ -3,7 +3,7 @@
 const url = "https://api-store-backend-jwkj.onrender.com/api/menu";
 
 const token = localStorage.getItem('token');
-// Function for adding new data
+// Funktion för att lägga till en ny data
 export async function addData(event) {
     event.preventDefault();
 
@@ -67,10 +67,10 @@ export async function addData(event) {
             const responseData = await response.json();
             console.log(responseData);
 
-            // Show success message or perform any other actions upon success
+            // Visa framgångsmeddelande eller utför andra åtgärder vid framgång
             alert('En ny menu har lagts till..');
             
-            // Clear the form after successful submission
+            // Rensa formuläret efter framgångsrik inlämning
             document.getElementById('add_data').reset();
 
         } catch (error) {

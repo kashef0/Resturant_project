@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
-    <script src="/src/js/index.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
 </head>
+
 <body>
     <header id="navHeader">
         <button id="menuButton" class="menuBTN">
@@ -20,12 +21,14 @@
             <li><a href="#food">Kategori</a></li>
             <!-- <li><a href="#food-menu">Meny</a></li> -->
             <li><a href="#kontakta">kontakta</a></li>
-            <li style="float: right;"><a href="/src/login.html">login</a></li>
+            <li style="float: right;"><a href="./login.html">login</a></li>
         </ul>
     </header>
+    <title>Restraunt</title>
+
     <section class="showcase-area" id="showcase">
         <div class="showcase-container">
-            <h1 class="main-title" id="home">FIT & FLAVOUR</h1>
+            <h1 class="main-title" id="home">Fit & Flavour</h1>
             <p>Ät hälsosamt, vi bryr oss om din hälsa.</p>
             <a href="#food-menu" class="btn btn-primary">meny</a>
             <a href="#contact" class="btn btn-primary">Boka Bord</a>
@@ -37,7 +40,7 @@
         <div class="food-container container">
             <div class="food-type fruite">
                 <div class="img-container">
-                    <img decoding="async" src="/src/images/pizza01.jpg" alt="pizza" />
+                    <img decoding="async" src="/src/images/Pizza01.jpg" alt="pizza" />
                     <div class="img-content">
                         <h3>pizza</h3>
                         <a href="https://en.wikipedia.org/wiki/Pizza" class="btn btn-primary" target="blank"
@@ -57,7 +60,7 @@
             </div>
             <div class="food-type grin">
                 <div class="img-container">
-                    <img decoding="async" src="/src/images/snack.jpg" alt="snack" />
+                    <img decoding="async" src="./images/snack.jpg" alt="snack" />
                     <div class="img-content">
                         <h3>förrätt</h3>
                         <a href="https://en.wikipedia.org/wiki/Hors_d%27oeuvre" class="btn btn-primary" target="blank"
@@ -84,59 +87,41 @@
 
         <div class="food-menu-container container" id="pizza" style="width: 100%;">
             <h3 class="menu_reburik"><a href="#pizza">PIZZA</a></h3>
+            <p id="pizza_error"></p>
         </div>
         <div class="food-menu-container container" id="pasta" style="width: 100%; box-shadow: 17px 0px 7px #0000008c">
             <h3 class="menu_reburik"><a href="#pasta">pasta</a></h3>
+            <p id="pasta_error"></p>
         </div>
         <div class="food-menu-container container" id="starters" style="width: 100%; box-shadow: 17px 0px 7px #0000008c"><br>
             <h3 class="menu_reburik"><a href="#starters">förrätter</a></h3>
-
+            <p id="starters_error"></p>
         </div>
     </section>
+    <form class="form-container customer_feedBack" id="feedBack_form">
+        <h2 class="Rekommendation-title" style="margin-top: auto;">Ange ditt feedback</h2>
+        <div class="elem-group">
+            <label for="choose">Ditt namn</label>
+            <input type="text" id="choose" name="i-like" />
+        </div>
+        <div class="elem-group">
+            <label for="customer_review">Vad tycker du om oss?</label>
+            <textarea id="customer_review" name="customer_review" placeholder="Vad tycker du om oss?"></textarea>
+        </div>
+        <div>
+            <button class="btn btn-primary" type="submit" id="feedBack_BTN">Submit</button>
+        </div>
+    </form>
     <section id="Rekommendation">
         <h2 class="Rekommendation-title">Vad våra kunder säger</h2>
-        <div class="Rekommendation-container container">
-            <div class="Rekommendation-box">
-                <div class="customer-detail">
-                    <div class="customer-photo">
-                        <img decoding="async" src="/src/images/griffen.jpg" alt="Stewie_Griffin" />
-                        <p class="customer-name">Stewie_Griffin</p>
-                    </div>
-                </div>
-                <p class="Rekommendation-text">
-                    Jag besökte FIT & FLAVOUR för första gången igår och jag måste säga att jag är otroligt imponerad.
-                </p>
-            </div>
-            <div class="Rekommendation-box">
-                <div class="customer-detail">
-                    <div class="customer-photo">
-                        <img decoding="async" src="/src/images/peter_griffin.webp" alt="peter_griffin" />
-                        <p class="customer-name">peter_griffin</p>
-                    </div>
-                </div>
-
-                <p class="Rekommendation-text">
-                    Jag besökte FIT & FLAVOUR och det var som att kliva in i en pizzadröm!, jag är inte druken
-                </p>
-            </div>
-            <div class="Rekommendation-box">
-                <div class="customer-detail">
-                    <div class="customer-photo">
-                        <img decoding="async" src="/src/images/Bart_Simpson_200px.png" alt="Bart_Simpson" />
-                        <p class="customer-name">Bart_Simpson</p>
-                    </div>
-                </div>
-                <p class="Rekommendation-text">
-                    Jag kommer definitivt att komma tillbaka och rekommendera denna restaurang till alla mina vänner och familj
-                </p>
-
-            </div>
+        <div class="Rekommendation-container container" id="box_feedBack">
+            
         </div>
     </section>
     <section id="contact">
         <div class="contact-container container">
             <div class="contact-img">
-                <img decoding="async" src="/src/images/form-image01.jpg" alt="" />
+                <img decoding="async" src="./images/form-image01.jpg" alt="" />
             </div>
 
             <form class="form-container" id="booking-form">
@@ -191,7 +176,16 @@
     
         <div class="footer-logo">
             <h3><span>FIT & FLAVOUR</span></h3>
-            <p class="company_name">FIT & FLAVOUR © 2024</p>
+            <p class="company_name">FIT & FLAVOUR © 2024</p><hr>
+            <table class="opning_table">
+                <caption class="opning_table_rubrik">Open tider:</caption>
+                <tr><th>Söndag:</th><td style="color: tomato; text-align: left;">Stängd</td></tr>
+                <tr><th>Tisdag:</th><td>10am - 11pm</td></tr>
+                <tr><th>Onsdag:</th><td>10am - 11pm</td></tr>
+                <tr><th>Torsdag:</th><td>10am - 11pm</td></tr>
+                <tr><th>Fredag:</th><td>10am - 11pm</td></tr>
+                <tr><th>Lördag:</th><td>10am - 11pm</td></tr>
+                </table>
         </div>
         <div class="second_footer" id="kontakta">
     
@@ -226,12 +220,11 @@
                 <a href="#"><i class="fa fa-youtube"></i></a>
                 <a href="#"><i class="fa fa-instagram"></i></a>
                 <a href="#"><i class="fa fa-whatsapp"></i></a>
-    
             </div>
-    
         </div>
-    
     </footer>
+    <script src="./js/reviews/add_review.js" type="module"></script>
+    <script src="./js/reviews/visa_review.js" type="module"></script>
 </body>
 
 </html>

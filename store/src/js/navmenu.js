@@ -22,9 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navHeader.forEach(link => {
         link.addEventListener("click", (event) => {
-            // Ta bort "current" klass från alla länkar
-            // navLinks.forEach(link => link.classList.remove("current"));
-            // Lägg till "current" klass till den klickade länken
             event.target.classList.add("current");
         });
     });

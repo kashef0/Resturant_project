@@ -10,13 +10,13 @@
     <script src="/src/js/main.js" type="module"></script>
     
     
-    <title>Dashboarden</title>
+    <title>Autentisering</title>
 </head>
 
 <body>
     <section class="showcase-area" id="showcase">
         <div class="showcase-container">
-            <h2 class="main-title" id="home">Välkomen till Dashboarden</h2>
+            <h1 class="main-title" id="home">Välkomen till Dashboarden</h1>
             <p>Här kan du hantera tjänster</p>
         </div>
     </section>
@@ -31,11 +31,14 @@
             <a href="#" id="logoutBtn"><i class="fa fa-sign-out fa-fw"></i> logout</a>
         </div>
         <div class="content">
-            <h2>Välkommen till Dashboarden</h2>
+            <h1>Välkommen till Dashboarden</h1>
             <p>Dashboarden är ditt huvudnav för att hantera och övervaka olika aspekter av din applikation. Här kan du:
             </p>
             <ul>
-                <li>Se och hantera dina mat menu</li>
+                <li>Se och hantera dina mat menu 
+                </li>
+                <li>För att kunna uppdatera eller radera en matmeny måste du ange menyns ID. För radering anger du bara ID och trycker på Radera. För uppdatering anger du ID för den matmeny du vill uppdatera och ändrar sedan uppgifterna.
+                </li>
                 <li>Lägga till nya administratörer</li>
                 <li>Se och hantera dina bokningar</li>
             </ul>
@@ -53,23 +56,23 @@
                 <span id="id_error" class="error"></span>
             </span>
             <span class="inputSpan">
-                <label for="title">Titel: </label>
-                <input type="text" id="title" name="title" placeholder="Titel">
+                <label for="title">Title: </label>
+                <input type="text" id="title" name="title" placeholder="Title">
                 <span id="title_error" class="error"></span>
             </span>
             <span class="inputSpan">
-                <label for="descrip">Beskrivning: </label>
-                <textarea id="descrip" name="descrip" placeholder="Beskrivning av innehållet" rows="20" cols="80" form="add_data"></textarea>
+                <label for="descrip">Description: </label>
+                <textarea id="descrip" name="descrip" placeholder="Description" rows="20" cols="80" form="add_data"></textarea>
                 <span id="descrip_error" class="error"></span>
             </span>
             <span class="inputSpan">
-                <label for="category">Kategori: </label>
-                <input type="text" id="category" name="category" placeholder="Kategori">
+                <label for="category">Category: </label>
+                <input type="text" id="category" name="category" placeholder="Category">
                 <span id="category_error" class="error"></span>
             </span>
             <span class="inputSpan">
-                <label for="price">pris: </label>
-                <input type="number" id="price" name="price" placeholder="pris">
+                <label for="price">Price: </label>
+                <input type="number" id="price" name="price" placeholder="Price">
                 <span id="price_error" class="error"></span>
             </span>
                 <button type="submit" class="btn">Lägg till</button>
@@ -79,12 +82,15 @@
         <div id="showData">
             <div class="food-menu-container container" id="pizza" style="width: 100%;">
                 <h3 class="menu_reburik"><a href="#pizza">PIZZA</a></h3>
+                <p id="pizza_error"></p>
             </div>
             <div class="food-menu-container container" id="pasta" style="width: 100%; box-shadow: 17px 0px 7px #0000008c">
                 <h3 class="menu_reburik"><a href="#pasta">pasta</a></h3>
+                <p id="pasta_error"></p>
             </div>
             <div class="food-menu-container container" id="starters" style="width: 100%; box-shadow: 17px 0px 7px #0000008c"><br>
                 <h3 class="menu_reburik"><a href="#starters">förrätter</a></h3>
+                <p id="starters_error"></p>
             </div>
         </div>
     </div>
@@ -120,37 +126,37 @@
                 <span id="id_error_booking" class="error"></span>
             </span>
             <span class="inputSpan">
-                <label for="customer_name">name: </label>
+                <label for="name">name: </label>
                 <input type="text" id="customer_name" name="name" placeholder="name">
-                <span id="name_error" class="error"></span>
+                <span id="title_error" class="error"></span>
             </span>
             <span class="inputSpan">
-                <label for="customer_date">datum: </label>
-                <input type="date" id="customer_date" name="date">
-                <span id="customer_descrip_error" class="error"></span>
+                <label for="date">datum: </label>
+                <input type="date" id="customer_date" role="textbox" name="date">
+                <span id="descrip_error" class="error"></span>
             </span>
             <span class="inputSpan">
-                <label for="customer_category">tid: </label>
+                <label for="category">tid: </label>
                 <input type="time" id="customer_category" name="time">
-                <span id="customer_category_error" class="error"></span>
+                <span id="category_error" class="error"></span>
             </span>
             <span class="inputSpan">
-                <label for="customer_tel">Tel: </label>
+                <label for="tel">Tel: </label>
                 <input type="tel" id="customer_tel" name="tel" placeholder="telefon nummer">
-                <span id="customer_tel_error" class="error"></span>
+                <span id="price_error" class="error"></span>
             </span>
             <span class="inputSpan">
-                <label for="customer_email">email: </label>
+                <label for="email">email: </label>
                 <input type="email" id="customer_email" name="email" placeholder="ange email">
-                <span id="customer_email_error" class="error"></span>
+                <span id="price_error" class="error"></span>
             </span>
             <span class="inputSpan">
-                <label for="customer_people">antal_people: </label>
+                <label for="people">antal_people: </label>
                 <input type="number" id="customer_people" name="Antal_people" placeholder="hur många personer...">
-                <span id="customer_personer_error" class="error"></span>
+                <span id="price_error" class="error"></span>
             </span>
             <span class="elem-group">
-                <label for="customer_takeout" class="takeout_label">Vill du ta med dig din beställning?</label>
+                <label for="takeout" class="takeout_label">Vill du ta med dig din beställning?</label>
                 <select id="customer_takeout" name="takeout">
                     <option value="Nej">Nej</option>
                     <option value="Ja">Ja</option>
@@ -159,7 +165,7 @@
             <br>
             <hr>
             <br>
-            <label for="customer_message">Något annat?</label>
+            <label for="message">Något annat?</label>
             <textarea id="customer_message" name="message" placeholder="Berätta för oss allt annat som kan vara viktigt."></textarea>
             <button id="update_booking" class="btn" type="button">Uppdatera</button>
             <button id="delete_booking" class="btn" type="button">Radera</button>
@@ -168,6 +174,9 @@
     
         </div>
     </div>
+    <!-- <div class="client">
+        <iframe src="http://localhost:1234" frameborder="0"></iframe>
+    </div> -->
     <div id="test"></div>
     <div id="skyddad" style="display:none;"></div>
     

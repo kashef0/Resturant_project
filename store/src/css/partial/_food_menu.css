@@ -105,3 +105,11 @@
     font-weight: 700;
     font-size: calc((1.2em + 1vw) / 1.5);
 }
+
+#pizza_error, #pasta_error, #starters_error {
+    text-align: center;
+    width: 100%;
+    font-size: 1.6em;
+    color: tomato;
+    padding-bottom: .5em;
+}

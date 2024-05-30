@@ -32,6 +32,30 @@
     animation: about-img-animation 1s ease-in-out forwards;
 }
 
+.opning_table {
+    text-align: right;
+    font-size: 1em;
+    padding-top: .5em;
+    font-family: var(--third-font-family);
+    font-weight: 400;
+}
+
+.opning_table .opning_table_rubrik {
+    text-align: left;
+    padding: .5em 0 0 0;
+    font-size: 1.2em;
+    color: #20b2aa;
+    
+}
+th {
+    color: #fffdf4;
+    font-weight: 600;
+}
+td {
+    padding-left: .1em;
+    color: #cbd1d7;
+}
+
 @keyframes about-img-animation {
     100% {
         transform: translate(0);

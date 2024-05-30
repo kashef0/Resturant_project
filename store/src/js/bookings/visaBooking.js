@@ -2,7 +2,7 @@
 const url = "https://api-store-backend-jwkj.onrender.com/api/bookings";
 
 
-// Function to fetch data from the API and show it on the website
+// Funktion för att hämta data från API och visa den på webbplatsen
 async function fetchDataShow() {
     try {
         const response = await fetch(url, {

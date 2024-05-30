@@ -16,7 +16,10 @@
 
 .Rekommendation-container {
     display: flex;
-    justify-content: space-between;
+    align-items: stretch;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
     margin-top: 30px;
     column-gap: 20px;
     font-size: calc((1em + 1vw) / 1.5);
@@ -36,7 +39,9 @@
 
 .Rekommendation-box {
     text-align: center;
-    padding: 20px;
+    padding: .65em;
+    margin-bottom: .75em;
+    width: 31.5%;
     background-color: white;
     border-radius: 10px;
     display: flex;

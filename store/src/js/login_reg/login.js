@@ -3,7 +3,7 @@ import { showProtectedContent } from '../protected.js';
 import { logOut_code } from './logOut.js';
 import { validateForm } from '../valdite_input.js';
 import { toggleNav } from '../navmenu.js';
-// import { validateForm } from './valdite_input.js';
+
 const API_URL = "https://api-store-backend-jwkj.onrender.com/api/users";
 const LOGIN_URL = `${API_URL}/login`;
 const login_site = document.getElementById('loginForm');
@@ -45,9 +45,9 @@ validateForm('loginForm', inputIds);
 
 window.addEventListener('load', showProtectedContent);
 document.getElementById('logoutBtn').addEventListener('click', () => {
-    // anropa logut fuction
+
     logOut_code();
-    // Redirect user to login page
+    
     window.location.href = "/src/pages/login.html";
 });
 

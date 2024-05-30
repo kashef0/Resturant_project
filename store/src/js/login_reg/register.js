@@ -32,7 +32,6 @@ export async function regist_code(event) {
             throw new Error('försök med ett annat lösenord eller e-post');
         }
 
-        // window.location.href = "/index.html";
         alert('Registrering lyckades! Logga in för att fortsätta.');
 
     } catch (error) {

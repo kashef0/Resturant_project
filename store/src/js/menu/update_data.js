@@ -45,9 +45,7 @@ export async function updateData(event) {
         const responseData = await response.json();
         console.log(responseData);
 
-        // Show success message or perform any other actions upon success
-        alert('Menu är uppdaterad..');
-
+        alert('Meny är uppdaterad..');
     } catch (error) {
         console.error("Det gick inte att uppdatera data status:", error);
     }

@@ -28,7 +28,7 @@ export async function addBooking(event) {
         takeOut: takeout
     };
 
-    console.log('postData:', postData); // Log the data being sent
+    console.log('postData:', postData);
 
     let hasErrors = false;
 
@@ -93,10 +93,8 @@ export async function addBooking(event) {
             const responseData = await response.json();
             console.log(responseData);
 
-            // Show success message or perform any other actions upon success
             alert('Bokning lyckades!');
-
-            // Clear the form after successful submission
+            
             document.getElementById('booking-form').reset();
 
         } catch (error) {

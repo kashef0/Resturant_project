@@ -44,7 +44,7 @@
     padding: 1rem 0;
     box-shadow: none;
     outline: none;
-    margin-bottom: 1rem;
+    
     color: #444;
     font-weight: 500;
     background: whitesmoke;
@@ -52,6 +52,15 @@
     border: 1px solid;
     border-radius: 10px;
 }
+
+#name_error, #date_error,
+#time_error, #phone_error
+,#email_error, #antal_people_error {
+    color: tomato;
+    margin-bottom: 1rem;
+    
+}
+
 
 .form-container textarea {
     display: block;
@@ -125,6 +134,5 @@ form.form-container.customer_feedBack {
 }
 
 form#feedBack_form {
-   
     box-shadow: 12px -8px 13px 3px #0009;
 }

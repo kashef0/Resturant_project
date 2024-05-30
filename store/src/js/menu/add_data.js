@@ -19,37 +19,40 @@ export async function addData(event) {
         price: price
     };
 
-    let hasErrors = false;
+    let hasErrors = true;
 
     if (title === "") {
         document.getElementById('title_error').innerHTML = "du har inte angett title";
-        hasErrors = true;
+        hasErrors = false;
     } else {
         document.getElementById('title_error').innerHTML = "";
     }
 
     if (descrip === "") {
         document.getElementById('descrip_error').innerHTML = "du har inte angett description";
-        hasErrors = true;
+        hasErrors = false;
     } else {
         document.getElementById('descrip_error').innerHTML = "";
     }
 
     if (category === "") {
         document.getElementById('category_error').innerHTML = "du har inte angett category";
-        hasErrors = true;
+        hasErrors = false;
     } else {
         document.getElementById('category_error').innerHTML = "";
     }
 
     if (price === "") {
         document.getElementById('price_error').innerHTML = "du har inte angett price";
-        hasErrors = true;
+        hasErrors = false;
     } else {
         document.getElementById('price_error').innerHTML = "";
     }
 
     if (!hasErrors) {
+        return;
+    }
+
         try {
             const response = await fetch(url, {
                 method: "POST",
@@ -72,10 +75,12 @@ export async function addData(event) {
             
             // Rensa formuläret efter framgångsrik inlämning
             document.getElementById('add_data').reset();
+            return true;
 
         } catch (error) {
             console.error("Det gick inte att lägga till data status:", error);
+            return false;
         }
-    }
+    
 }
 

@@ -46,8 +46,10 @@ export async function updateData(event) {
         console.log(responseData);
 
         alert('Meny är uppdaterad..');
+        return true;
     } catch (error) {
         console.error("Det gick inte att uppdatera data status:", error);
+        return false;
     }
 }
 

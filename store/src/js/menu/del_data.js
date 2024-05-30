@@ -30,8 +30,10 @@ export async function deleteData(event) {
             throw new Error(`ingen response! Status: ${response.status}`);
         }
         alert('Meny är raderad..');
+        return true;
 
     } catch (error) {
         console.error("Det gick inte att radera data status:", error);
+        return false;
     }
 }

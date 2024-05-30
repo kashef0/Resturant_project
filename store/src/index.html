@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>Fit & Flavour</title>
     <script src="./js/index.js" type="module"></script>
 </head>
 
@@ -24,7 +24,6 @@
             <li style="float: right;"><a href="./login.html">login</a></li>
         </ul>
     </header>
-    <title>Restraunt</title>
 
     <section class="showcase-area" id="showcase">
         <div class="showcase-container">
@@ -129,32 +128,32 @@
                 <div class="elem-group">
                     <label for="name">Ditt fullständiga namn</label>
                     <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern="[A-Z\sa-z]{3,20}">
-                    <span id="name_error"></span>
+                    <p id="name_error"></p>
                 </div>
                 <div class="elem-group inlined">
                     <label for="checkin-date">datum</label>
                     <input type="date" id="checkin-date" name="checkin-date">
-                    <span id="date_error"></span>
+                    <p id="date_error"></p>
                 </div>
                 <div class="elem-group inlined">
                     <label for="checkin-time">tid</label>
                     <input type="time" id="checkin-time" name="checkin-time">
-                    <span id="time_error"></span>
+                    <p id="time_error"></p>
                 </div>
                 <div class="elem-group">
                     <label for="phone">ditt telefone</label>
                     <input type="tel" id="phone" name="visitor_phone" placeholder="071-348-3872">
-                    <span id="phone_error"></span>
+                    <p id="phone_error"></p>
                 </div>
                 <div class="elem-group">
                     <label for="email">Ditt E-mail</label>
-                    <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com">
-                    <span id="email_error"></span>
+                    <input type="email" id="email" name="visitor_email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="john.doe@email.com">
+                    <p id="email_error"></p>
                 </div>
                 <div class="elem-group">
                     <label for="number">Antal personer</label>
                     <input type="number" id="number" name="visitor_number" placeholder="Antal personer">
-                    <span id="antal_people_error"></span>
+                    <p id="antal_people_error"></p>
                 </div>
                 <div class="elem-group">
                     <label for="takeout">Vill du ta med dig din beställning?</label>

@@ -13,7 +13,7 @@ export async function deleteBooking(event) {
 
     if (id === "") {
         document.getElementById('id_error_booking').innerHTML = "du har inte angett ID";
-        return;
+        return false;
     } else {
         document.getElementById('id_error_booking').innerHTML = "";
     }
@@ -31,8 +31,10 @@ export async function deleteBooking(event) {
         }
 
         alert('bokning raderades..');
+        return true;
 
     } catch (error) {
         console.error("Det gick inte att radera data status:", error);
+        return false;
     }
 }

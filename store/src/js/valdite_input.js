@@ -1,6 +1,10 @@
 "use strict";
 export function validateForm(formId, inputIds) {
     const form = document.getElementById(formId);
+    if (!form) {
+        console.error(`Form with id ${formId} not found`);
+        return false;
+    }
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();

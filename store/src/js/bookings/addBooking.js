@@ -99,6 +99,7 @@ export async function addBooking(event) {
 
         } catch (error) {
             console.error("Det gick inte att lägga till data status:", error);
+            
         }
     }
 }

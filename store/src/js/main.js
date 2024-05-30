@@ -16,32 +16,42 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     document.getElementById('add_data').addEventListener('submit', async function(event) {
         event.preventDefault();
-        await addData(event);
-        location.reload(); // Ladda om sidan efter att data har lagts till
+        const isValid = await addData(event);
+        if (isValid) {
+            location.reload();
+        }
     });
 
     document.getElementById('update_data').addEventListener('click', async function(event) {
         event.preventDefault();
-        await updateData(event);
-        location.reload(); // Ladda om sidan efter att data har uppdaterats
+        const isValid = await updateData(event);
+        if (isValid) {
+            location.reload();
+        }
     });
 
     document.getElementById('delete_data').addEventListener('click', async function(event) {
         event.preventDefault();
-        await deleteData(event);
-        location.reload(); // Ladda om sidan efter att data har tagits bort
+        const isValid = await deleteData(event);
+        if (isValid) {
+            location.reload();
+        }
     });
     
     document.getElementById('update_booking').addEventListener('click', async function(event) {
         event.preventDefault();
-        await updateBooking(event);
-        location.reload(); // Ladda om sidan efter att bokningen har uppdaterats
+        const isValid = await updateBooking(event);
+        if (isValid) {
+            location.reload();
+        }
     });
 
     document.getElementById('delete_booking').addEventListener('click', async function(event) {
         event.preventDefault();
-        await deleteBooking(event);
-        location.reload(); // Ladda om sidan efter att bokningen har tagits bort
+        const isValid = await deleteBooking(event);
+        if (isValid) {
+            location.reload();
+        }
     });
     visaDataAdmin();
     visaBooking();

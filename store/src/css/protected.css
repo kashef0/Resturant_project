@@ -24,7 +24,7 @@
     display: inline-block;
     height: 35px;
     line-height: 35px;
-    margin-left: .35em;
+    margin-left: 1em;
     padding: 0 1em;
     font-weight: 400;
     text-align: center;
@@ -422,6 +422,8 @@ body {
     width: 100%;
     padding: .5em;
     word-break: break-word;
+    height: 300px;
+    overflow-y: auto;
 }
 
 #pizza_error, #pasta_error, #starters_error {
@@ -429,6 +431,14 @@ body {
     font-size: 1em;
     color: tomato;
     padding: .5em;
+}
+
+#id_error_booking, #name_error, #date_error
+, #time_error, #tel_error, #email_error, #antal_people_error,
+#id_error, #title_error, #descrip_error, #category_error,
+#price_error {
+    color: tomato;
+    padding: .5em 0 0 .5em;
 }
 
 @media screen and (max-width: 700px) {

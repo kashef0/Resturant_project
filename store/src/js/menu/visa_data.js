@@ -5,6 +5,8 @@ import { toggleNav } from '../navmenu.js';
 
 // Funktion för att hämta data från API och visa den på webbplatsen
 async function fetchDataShow() {
+    const dataLoading = document.getElementById("checkData");
+    dataLoading.style.display = "block";
     try {
         const response = await fetch(url, {
             method: "GET",
@@ -20,6 +22,8 @@ async function fetchDataShow() {
         visaDataAdmin(data);
     } catch (error) {
         console.error('Error fetching data:', error);
+    } finally {
+        dataLoading.style.display = "none";
     }
 }
 

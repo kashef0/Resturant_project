@@ -5,6 +5,8 @@ const url = "https://api-store-backend-jwkj.onrender.com/api/review";
 
 // Funktion för att hämta data från API och visa den på webbplatsen
 async function fetchFeedback() {
+    const loadingData = document.getElementById("showDataLoading");
+    loadingData.style.display = "block";
     try {
         const response = await fetch(url, {
             method: "GET",
@@ -20,6 +22,8 @@ async function fetchFeedback() {
         visaFeedback(data);
     } catch (error) {
         console.error('Error fetching data:', error);
+    } finally {
+        loadingData.style.display = "none";
     }
 }
 

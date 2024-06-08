@@ -108,6 +108,7 @@ footer {
     font-weight: 400;
     vertical-align: middle;
     margin: 0;
+    word-break: break-all;
 }
 
 .main_footer .second_footer p span {

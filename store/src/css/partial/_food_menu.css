@@ -113,3 +113,11 @@
     color: tomato;
     padding-bottom: .5em;
 }
+
+#checkData {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8em;
+    padding-bottom: 1em;
+    font-weight: 700;
+}

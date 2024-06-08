@@ -15,7 +15,9 @@ export function showProtectedContent() {
     }
 
     const token = localStorage.getItem('token');
-    if (token && window.location.pathname !== "/index.html") {
+    console.log(token);
+    console.log("test token", token && window.location.pathname !== "/index.html")
+    if ( token && window.location.pathname !== "/index.html") {
         fetch(PROTECTED_URL, {
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -28,14 +30,28 @@ export function showProtectedContent() {
                 return response.text();
             })
             .then(data => {
+                console.log("test data in protected.js", data)
                 window.location.href = "/protected.html";
                 messageEL.style.display = "block";
+                return
             })
             .catch(error => {
                 console.error('Error accessing protected content:', error.message);
             });
+    } else {
+
+        window.location.href = "/login.html";
+        return
     }
 
 }
 
-window.addEventListener('load', showProtectedContent);
+
+export function showProtectedContent1() {
+    const token = localStorage.getItem('token');
+    if(!token) {
+        window.location.href = "/login.html";
+    }
+}
+
+//window.addEventListener('load', showProtectedContent);

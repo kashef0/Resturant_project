@@ -10,6 +10,7 @@ const login_site = document.getElementById('loginForm');
 login_site.addEventListener('submit', login_code);
 export async function login_code(event) {
     event.preventDefault();
+    console.log("test login")
     const username = document.getElementById('username').value;
     const password = document.getElementById('login-password').value;
     
@@ -26,7 +27,8 @@ export async function login_code(event) {
             throw new Error('Login failed');
         }
         const data = await response.json();
-        
+        console.log(response.ok);
+        console.log(data);
         localStorage.setItem('token', data.token);
         localStorage.setItem('username', username);
         showProtectedContent();
@@ -43,12 +45,11 @@ export async function login_code(event) {
 const inputIds = ['username', 'login-password'];
 validateForm('loginForm', inputIds);
 
-window.addEventListener('load', showProtectedContent);
+// window.addEventListener('load', showProtectedContent);
 document.getElementById('logoutBtn').addEventListener('click', () => {
-
+    console.log("logout");
     logOut_code();
     
-    window.location.href = "/src/pages/login.html";
 });
 
 toggleNav();

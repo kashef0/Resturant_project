@@ -13,7 +13,6 @@ import { deleteBooking } from "./bookings/delBokning.js";
 import { updateBooking } from "./bookings/updateBokning.js";
 
 document.addEventListener('DOMContentLoaded', async function() {
-
     document.getElementById('add_data').addEventListener('submit', async function(event) {
         event.preventDefault();
         const isValid = await addData(event);
@@ -56,7 +55,6 @@ document.addEventListener('DOMContentLoaded', async function() {
     visaDataAdmin();
     visaBooking();
 });
-
 
 getAdmin();
 regist_code();
